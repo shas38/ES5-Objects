@@ -9,7 +9,7 @@ function Character(name, profession, gender, age, strength, hp){
         console.log(this)
     }
 }
-
+// const is blocked scopped
 const MICHAEL = new Character('Michael', 'boyscout', 'male', 106, 105, 10);
 
 MICHAEL.printStats();

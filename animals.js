@@ -29,3 +29,12 @@ const CAT = {
 CAT.makeNoise(); // ""
 CAT.raining = true;
 CAT.makeNoise(); // meow!
+
+
+const massHysteria = function(DOG, CAT){
+    if(DOG.raining && CAT.raining){
+        console.log("DOGS AND CATS LIVING TOGETHER! MASS HYSTERIA!");
+    }
+}
+
+massHysteria(DOG, CAT);
