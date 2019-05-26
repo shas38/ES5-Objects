@@ -22,9 +22,11 @@ const book = { //book is an object literal
 console.log(book)
 book.isAwesome();
 
-// An object constructor function is used for creating objects of the same type (have same properties and methods).
+// An object constructor function is used for creating objects of the same type (have the same properties and methods).
+// A constructor is a function used for creating objects with the same functionality.  
+// By convention, we capitalise the first letter of the name of the constructor function. 
 // Objects of the same type are created by calling the constructor function with the new keyword.
-
+// The value of this inside a function is determined by the object that's calling the function. 
 function Book(title, awesome){
     this.title = title;
     this.awesome = awesome;
@@ -67,8 +69,3 @@ Magazine.prototype = Object.create(BookProto.prototype);
 
 const mag1 = new Magazine('Magazine One', true, '2014');
 console.log(mag1);
-
-
-
-
-
