@@ -4,15 +4,28 @@ const DOG = {
     raining: true,
     noise: 'woof!',
     makeNoise: function(){
-        console.log(this.noise);
+        if(this.raining){
+            console.log(this.noise);
+        }    
     },
 }
+DOG.makeNoise(); // woof!
 
-DOG.makeNoise(); 
-
-const CAT = {
+let cat = {
     raining: true,
     noise: 'meow!'
 }
+DOG.makeNoise.call(cat); // meow!
 
-DOG.makeNoise.call(CAT);
+const CAT = {
+    raining: false,
+    noise: 'meow!',
+    makeNoise: function(){
+        if(this.raining){
+            console.log(this.noise);
+        }      
+    },
+}
+CAT.makeNoise(); // ""
+CAT.raining = true;
+CAT.makeNoise(); // meow!
