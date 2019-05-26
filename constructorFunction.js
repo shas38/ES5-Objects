@@ -12,8 +12,11 @@ function Book(title, awesome, author){
     // this = {title: 'Far Cry', awesome: ture, author: 'James'};
     // return this;
 }
-// The value of "this" determined by the function that is calling it. 
+// The value of "this" determined by the function that is calling it (the owner of the function). 
 // The new key world will overwrite "this" and set it to an empty object. 
 const farCry = new Book('Far Cry', true, 'James');
 // const farCry = {title: 'Far Cry', awesome: ture, author: 'James'};
 console.log(farCry);
+// If constructor function is used without the 'new' keyword then 'this' will refer to the global object.
+// Without the new keyword the constructor function call will return undefined.
+console.log(Book('Far Cry', true, 'James'))
